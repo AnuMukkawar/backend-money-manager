@@ -1,7 +1,6 @@
 {
   "name": "backend-money-manager",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -20,5 +19,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnuMukkawar/backend-money-manager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AnuMukkawar/backend-money-manager/issues"
+  },
+  "homepage": "https://github.com/AnuMukkawar/backend-money-manager#readme",
+  "description": ""
 }
