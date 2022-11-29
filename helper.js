@@ -15,3 +15,10 @@ export async function deleteTransactions(_id) {
     .deleteOne(_id= _id);
     
 }
+export async function addTransactions(transaction) {
+  return await client
+    .db("money_manager")
+    .collection("expenses")
+    .insertOne(transaction);
+    
+}

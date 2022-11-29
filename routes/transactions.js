@@ -1,6 +1,6 @@
 import express from "express";
 const router=express.Router();
-import {getAllTransactions,deleteTransactions } from "../helper.js";
+import {getAllTransactions,deleteTransactions, addTransactions } from "../helper.js";
 
 //post method - to insert data to db
 // router.post("/", async (request, response) => {
@@ -12,7 +12,14 @@ import {getAllTransactions,deleteTransactions } from "../helper.js";
 //     response.send(result);
 //   })
   
-  
+router.post("/", async (req, res) => {
+  const transaction = request.body;
+  console.log(transaction);
+  const result = await addTransactions(transaction);
+
+  response.send(result);
+})
+
   router.get("/", async (req,res)=>{
 
       let transactions=await getAllTransactions(req);
