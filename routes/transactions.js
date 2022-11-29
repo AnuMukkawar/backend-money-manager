@@ -12,8 +12,8 @@ import {getAllTransactions,deleteTransactions, addTransactions } from "../helper
 //     response.send(result);
 //   })
   
-router.post("/", async (req, res) => {
-  const transaction = request.body;
+router.post("/", async (req, res,transaction) => {
+  //const transaction = request.body;
   console.log(transaction);
   const result = await addTransactions(transaction);
 
