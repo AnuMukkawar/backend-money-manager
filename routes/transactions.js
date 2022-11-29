@@ -16,13 +16,14 @@ import {getAllTransactions,deleteTransactions } from "../helper.js";
   router.get("/", async (req,res)=>{
 
       let transactions=await getAllTransactions(req);
+      await deleteTransactions(_id);
   
       res.send(transactions)
   })
-  router.delete("/", async (req,res,_id)=>{
-    let transactions=await deleteTransactions(_id);
+//   router.delete("/", async (req,res)=>{
+//     let transactions=await deleteTransactions(_id);
 
-    res.send(transactions)
-})
+//     res.send(transactions)
+// })
   
   export const transactionRouter=router;
