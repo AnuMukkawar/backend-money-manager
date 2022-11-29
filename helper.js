@@ -12,6 +12,6 @@ export async function deleteTransactions(_id) {
   return await client
     .db("money_manager")
     .collection("expenses")
-    .deleteOne(_id);
+    .deleteOne(_id= _id);
     
 }

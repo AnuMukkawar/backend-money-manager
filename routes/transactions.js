@@ -19,8 +19,8 @@ import {getAllTransactions,deleteTransactions } from "../helper.js";
   
       res.send(transactions)
   })
-  router.delete("/", async (req,res,id)=>{
-    let transactions=await deleteTransactions(id);
+  router.delete("/", async (req,res,_id)=>{
+    let transactions=await deleteTransactions(_id);
 
     res.send(transactions)
 })
