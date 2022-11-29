@@ -8,3 +8,10 @@ export async function getAllTransactions(req) {
     .find({}).toArray();
     
 }
+export async function deleteTransactions(_id) {
+  return await client
+    .db("money_manager")
+    .collection("expenses")
+    .deleteOne(_id);
+    
+}
