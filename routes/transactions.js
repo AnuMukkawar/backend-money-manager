@@ -23,14 +23,15 @@ router.post("/", async (req, res,transaction) => {
   router.get("/", async (req,res)=>{
 
       let transactions=await getAllTransactions(req);
-      await deleteTransactions(_id);
-  
       res.send(transactions)
   })
-//   router.delete("/", async (req,res)=>{
-//     let transactions=await deleteTransactions(_id);
 
-//     res.send(transactions)
-// })
+  router.delete("/", async (req,res)=>{
+ // take params
+    const {_id} = req.params;
+    let transactions=await deleteTransactions(_id);
+
+    res.send(transactions)
+})
   
   export const transactionRouter=router;
