@@ -29,6 +29,7 @@ router.post("/", async (req, res,transaction) => {
   router.delete("/", async (req,res)=>{
  // take params
     const {_id} = req.params;
+    console.log(_id)
     let transactions=await deleteTransactions(_id);
 
     res.send(transactions)
