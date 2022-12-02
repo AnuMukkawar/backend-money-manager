@@ -2,22 +2,12 @@ import express from "express";
 const router=express.Router();
 import {getAllTransactions,deleteTransactions, addTransactions } from "../helper.js";
 
-//post method - to insert data to db
-// router.post("/", async (request, response) => {
-//     const newMovies = request.body;
-//     console.log(newMovies);
-//     //db.movies.insertMany(movies)
-//     const result = await addMovies(newMovies);
-  
-//     response.send(result);
-//   })
-  
-router.post("/", async (req, res) => {
+router.post("/", async (req,res) => {
   const transaction = req.body;
   console.log(transaction);
   const result = await addTransactions(transaction);
 
-  response.send(result);
+  res.send(result);
 })
 
   router.get("/", async (req,res)=>{
