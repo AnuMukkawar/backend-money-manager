@@ -1,5 +1,5 @@
 import { client } from "./index.js";
-import bcrypt from "bcrypt";
+import { ObjectId } from "mongodb";
 
 export async function getAllTransactions(req) {
   return await client
@@ -12,7 +12,7 @@ export async function deleteTransactions(_id) {
   return await client
     .db("money_manager")
     .collection("expenses")
-    .deleteOne({_id});
+    .deleteOne({"_id":ObjectId(_id)});
     
 }
 export async function addTransactions(transaction) {

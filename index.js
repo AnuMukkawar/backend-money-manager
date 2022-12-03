@@ -21,7 +21,6 @@ async function createConnection(){
 }
 
 export const client =await createConnection();
-// const expenses= await client.db("money_manager").collection("expenses").findOne({id:1});
 app.use(express.json());
 // app.get("/",(req,res)=>{
 //     res.send("Hello");
