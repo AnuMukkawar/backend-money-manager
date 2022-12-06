@@ -17,7 +17,7 @@ router.post("/", async (req, res) => {
 
 router.delete("/", async (req, res) => {
   // take params
-  const { _id } = req.query;
+  const { _id } = req.body;
   let transactions = await deleteTransactions(_id);
 
   res.send(transactions)
